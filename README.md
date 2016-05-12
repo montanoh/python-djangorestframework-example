@@ -1,6 +1,6 @@
 # python djangorestframework example
 
-   git clone https://github.com/montanoh/python-djangorestframework-example.git myRest
-   cd myRest/
-   ./manage.py syncdb
-   ./manage.py runserver
+   git clone https://github.com/montanoh/python-djangorestframework-example.git myRest <br/>
+   cd myRest/ <br/>
+   ./manage.py syncdb <br/>
+   ./manage.py runserver <br/>
