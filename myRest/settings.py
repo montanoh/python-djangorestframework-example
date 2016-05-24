@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 """
 Django settings for myRest project.
 
@@ -49,6 +50,14 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
+
+REST_FRAMEWORK = {
+    # 加上這一段 rest api 都會變成唯讀
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'],
+    # 加上下面這段，則需要帳號密碼才能存取rest api
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAdminUser',],
+    'PAGE_SIZE': 10
+}
 
 ROOT_URLCONF = 'myRest.urls'
 
